@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MMCoreJ">
+    <CLASSES>
+      <root url="jar:///Applications/Micro-Manager-2.0.0-beta3-20181001/plugins/Micro-Manager/MMCoreJ.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
