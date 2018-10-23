@@ -5,6 +5,10 @@ import MMExceptions.DeviceNotLoadedException;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * MM Core already manages the loaded devices and throws an exception when you attempt to assign duplicate labels
+ * This class keeps track of only device label names
+ */
 public class DeviceLabelsAssigned {
     private static Set<String> loaded_devices;
 

@@ -1,24 +1,23 @@
 package MMtest;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.fail;
-
 import MMCore.MMCore;
-import MMDevices.MMXYStageDevice;
+import MMDevices.MMLinearStageDevice;
 import MMExceptions.*;
 import mmcorej.CMMCore;
 import mmcorej.DeviceDetectionStatus;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * all tests use micromanager's DemoCamera hub
  *   https://micro-manager.org/wiki/DemoCamera
  *
  */
-public class testXYStageDevice {
+public class testLinearStageDevice {
 
-    private MMXYStageDevice xyStage;
-    private MMXYStageDevice xyStage2;
+    private MMLinearStageDevice linearStage;
+    private MMLinearStageDevice linearStage2;
     private CMMCore lcmm;
 
     // ==========  Basic device loading tests =================== //
@@ -27,7 +26,7 @@ public class testXYStageDevice {
     void test_device_loading() {
         // Setup
         try{
-            xyStage = new MMXYStageDevice("stage1", "DemoCamera", "DXYStage");
+            linearStage = new MMLinearStageDevice("stage1", "DemoCamera", "DStage");
         } catch (Exception ex) {
             System.out.println("test failed: Device load fail "+ex.getMessage());
             fail(ex);
@@ -44,7 +43,7 @@ public class testXYStageDevice {
     void test_invalid_device_loading() {
         // Setup
         try{
-            xyStage = new MMXYStageDevice("stage1", "DemoCamera", "baddevicename");
+            linearStage = new MMLinearStageDevice("stage1", "DemoCamera", "baddevicename");
         } catch (LoadStageDeviceException stex) {
             System.out.println("test passed: invalid device catch");
         } catch (Exception ex) {
@@ -63,8 +62,8 @@ public class testXYStageDevice {
     void test_duplicate_device_labels() {
         // Setup
         try{
-            xyStage = new MMXYStageDevice("stage1", "DemoCamera", "DXYStage");
-            xyStage2 = new MMXYStageDevice("stage1", "DemoCamera", "DXYStage");
+            linearStage = new MMLinearStageDevice("stage1", "DemoCamera", "DStage");
+            linearStage2 = new MMLinearStageDevice("stage1", "DemoCamera", "DStage");
         } catch (LoadStageDeviceException ex) {
             System.out.println("test pass: duplicate device label catch");
         } catch (Exception ex) {
@@ -83,14 +82,14 @@ public class testXYStageDevice {
     void test_device_detection() {
         // Setup
         try{
-            xyStage = new MMXYStageDevice("stage1", "DemoCamera", "DXYStage");
+            linearStage = new MMLinearStageDevice("stage1", "DemoCamera", "DStage");
         } catch (LoadStageDeviceException ex) {
             fail(ex);
         }
 
         // Tests
         try {
-            DeviceDetectionStatus response = xyStage.detectDevice();
+            DeviceDetectionStatus response = linearStage.detectDevice();
             System.out.println("device detection response = "+response.toString());
         } catch (DeviceNotDetectedException dex) {
             fail(dex);
@@ -110,14 +109,14 @@ public class testXYStageDevice {
     void test_device_initialization() throws DeviceNotInitializedException {
         // Setup
         try {
-            xyStage = new MMXYStageDevice("stage1", "DemoCamera", "DXYStage");
+            linearStage = new MMLinearStageDevice("stage1", "DemoCamera", "DStage");
         } catch (Exception ex) {
             fail(ex);
         }
 
         // Tests
         try {
-            xyStage.initializeDevice();
+            linearStage.initializeDevice();
         } catch (DeviceNotInitializedException dex) {
             throw new DeviceNotInitializedException("test fail: device could not be initialized :"+dex);
         }
@@ -138,17 +137,17 @@ public class testXYStageDevice {
         // Setup
         lcmm = MMCore.getCore();
         try {
-            xyStage = new MMXYStageDevice("stage1", "DemoCamera", "DXYStage");
+            linearStage = new MMLinearStageDevice("stage1", "DemoCamera", "DStage");
         } catch (Exception ex) {
             fail(ex);
         }
 
         // Tests
         try {
-            xyStage.setOriginXY();
-            xyStage.setRelativeXYPosition(100, 100);
-            int x = (int) Math.round(lcmm.getXPosition(xyStage.getLabel()));
-            int y = (int) Math.round(lcmm.getYPosition(xyStage.getLabel()));
+            linearStage.setOrigin();
+            linearStage.setRelativePosition(100);
+            int x = (int) Math.round(lcmm.getPosition(linearStage.getLabel()));
+            int y = (int) Math.round(lcmm.getPosition(linearStage.getLabel()));
             if(x!=100 || y!= 100) {
                 throw new DeviceNotSetException("unable to set device values");
             }
@@ -169,22 +168,22 @@ public class testXYStageDevice {
         // Setup
         lcmm = MMCore.getCore();
         try {
-            xyStage = new MMXYStageDevice("stage1", "DemoCamera", "DXYStage");
-            xyStage2 = new MMXYStageDevice("stage2", "DemoCamera", "DXYStage");
+            linearStage = new MMLinearStageDevice("stage1", "DemoCamera", "DStage");
+            linearStage2 = new MMLinearStageDevice("stage2", "DemoCamera", "DStage");
         } catch (Exception ex) {
             fail(ex);
         }
 
         // Tests
         try {
-            xyStage.setOriginXY();
-            xyStage.setRelativeXYPosition(100, 100);
-            xyStage2.setOriginXY();
-            xyStage2.setRelativeXYPosition(50, 50);
-            int x = (int) Math.round(lcmm.getXPosition(xyStage.getLabel()));
-            int y = (int) Math.round(lcmm.getYPosition(xyStage.getLabel()));
-            int x2 = (int) Math.round(lcmm.getXPosition(xyStage2.getLabel()));
-            int y2 = (int) Math.round(lcmm.getYPosition(xyStage2.getLabel()));
+            linearStage.setOrigin();
+            linearStage.setRelativePosition(100);
+            linearStage2.setOrigin();
+            linearStage2.setRelativePosition(50);
+            int x = (int) Math.round(lcmm.getPosition(linearStage.getLabel()));
+            int y = (int) Math.round(lcmm.getPosition(linearStage.getLabel()));
+            int x2 = (int) Math.round(lcmm.getPosition(linearStage2.getLabel()));
+            int y2 = (int) Math.round(lcmm.getPosition(linearStage2.getLabel()));
             if(x!=100 || y!= 100 || x2!=50 || y2!= 50) {
                 throw new DeviceNotSetException("unable to set device values on two similar devices");
             }
@@ -209,22 +208,21 @@ public class testXYStageDevice {
         // Setup
         lcmm = MMCore.getCore();
         try {
-            xyStage = new MMXYStageDevice("stage1", "DemoCamera", "DXYStage");
-            xyStage2 = new MMXYStageDevice("stage2", "DemoCamera", "DStage");
+            linearStage = new MMLinearStageDevice("stage1", "DemoCamera", "DStage");
+            linearStage2 = new MMLinearStageDevice("stage2", "DemoCamera", "DStage");
         } catch (Exception ex) {
             fail(ex);
         }
 
         // Tests
         try {
-            xyStage.setOriginXY();
-            xyStage.setRelativeXYPosition(100, 100);
-            int x = (int) Math.round(lcmm.getXPosition(xyStage.getLabel()));
-            int y = (int) Math.round(lcmm.getYPosition(xyStage.getLabel()));
-            int x2 = (int) Math.round(lcmm.getXPosition(xyStage2.getLabel()));
-            int y2 = (int) Math.round(lcmm.getXPosition(xyStage2.getLabel()));
-            System.out.println(" "+x+" "+y+" "+x2+" "+y2);
-            if(x!=100 || y!= 100 || x2!=50 || y2!=50) {
+            linearStage.setOrigin();
+            linearStage.setRelativePosition(100);
+            linearStage2.setOrigin();
+            linearStage2.setRelativePosition(50);
+            int x = (int) Math.round(lcmm.getPosition(linearStage.getLabel()));
+            int x2 = (int) Math.round(lcmm.getPosition(linearStage2.getLabel()));
+            if(x!=100 || x2!=50) {
                 throw new DeviceNotSetException("unable to set device values on two similar devices");
             }
         } catch (Exception ex) {

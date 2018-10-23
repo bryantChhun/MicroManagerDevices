@@ -63,3 +63,17 @@ repositories {
     mavenCentral()
     jcenter()
 }
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+//group   = project.ext.groupname
+//version = project.ext.versionsMap[project.name]
+
+//artifacts
+//        {
+//            archives sourcesJar
+//            archives javadocJar
+//        }

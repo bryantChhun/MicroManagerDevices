@@ -4,6 +4,11 @@ import MMExceptions.DeviceNotLoadedException;
 
 import java.util.HashMap;
 
+/**
+ * MM Core already manages the loaded devices and throws appropriate exceptions
+ * This code could be used if ClearControl would also manage device label-type maps.
+ * You can also 'get' device info by calling .getModuleName or .getDeviceName from the device instance
+ */
 public class DeviceNameMap {
     private static HashMap<String, String> loaded_devices;
 

@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2929b62-50a3-4d7c-b252-ad0530552611" name="Default" comment="" />
+    <list default="true" id="b2929b62-50a3-4d7c-b252-ad0530552611" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FocusDirectionException/FocusDirectionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MMDevices/MMLaserDevice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MMDevices/MMLinearStageDevice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MMDevices/MMShutterDevice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MMInterfaces/MMLinearStageBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MMtest/testLaserDevice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MMtest/testLinearStageDevice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MMtest/testShutterDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/MMDevices/MMXYStageDevice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MMDevices/MMXYStageDevice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/MMInterfaces/MMXYStageBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MMInterfaces/MMXYStageBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/MMtest/testXYStageDevice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/MMtest/testXYStageDevice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MMCore/DeviceLabelsAssigned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MMCore/DeviceLabelsAssigned.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MMCore/DeviceNameMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MMCore/DeviceNameMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MMInterfaces/MMXYStageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MMInterfaces/MMXYStageBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MMInterfaces/MMXYStageInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MMtest/testXYStageDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MMtest/testXYStageDevice.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,13 +44,12 @@
       <file leaf-file-name="MMXYStageDevice.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/MMDevices/MMXYStageDevice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+            <state relative-caret-position="435">
+              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#550#551#0" expanded="true" />
                 <element signature="e#579#580#0" expanded="true" />
-                <element signature="e#616#617#0" expanded="true" />
                 <element signature="e#650#651#0" expanded="true" />
                 <element signature="e#687#688#0" expanded="true" />
                 <element signature="e#721#722#0" expanded="true" />
@@ -37,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testXYStageDevice.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="testXYStageDevice.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/MMtest/testXYStageDevice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="76" column="13" lean-forward="true" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+            <state relative-caret-position="172">
+              <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,11 +70,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MMXYStageBase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MMInterfaces/MMXYStageBase.java">
+      <file leaf-file-name="testLinearStageDevice.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/MMtest/testLinearStageDevice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+            <state relative-caret-position="353">
+              <caret line="222" column="45" lean-forward="true" selection-start-line="222" selection-start-column="45" selection-end-line="222" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MMLinearStageBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MMInterfaces/MMLinearStageBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1245">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,6 +115,13 @@
       <find>load</find>
       <find>label</find>
       <find>detectDevice</find>
+      <find>public</find>
+      <find>device</find>
+      <find>xyStage</find>
+      <find>DXYStage</find>
+      <find>X</find>
+      <find>.getXPosition</find>
+      <find>.getYPosition</find>
     </findStrings>
     <replaceStrings>
       <replace>throws CMMException;</replace>
@@ -96,7 +136,15 @@
       <replace>ex.getMessage()</replace>
       <replace>ex.getMessage())</replace>
       <replace>+ex.getMessage())</replace>
+      <replace>MMLinearStageDevice</replace>
+      <replace>DStage</replace>
+      <replace>linearStage</replace>
+      <replace>protected</replace>
+      <replace>.getPosition</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -181,6 +229,10 @@
                 <option name="description" value="Generates Gradle wrapper files." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="sourcesJar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles test classes." />
@@ -313,9 +365,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6158960128000" />
+        <entry key="$PROJECT_DIR$" value="6159130157000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="712297744" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="966598357" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="4171081951" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="146894985" />
       </map>
@@ -458,22 +510,29 @@
         <option value="$PROJECT_DIR$/src/main/java/MMCore/LoadedDevices.java" />
         <option value="$PROJECT_DIR$/src/main/java/MMXYStageDevice.java" />
         <option value="$PROJECT_DIR$/src/test/java/MMtest/MMtest.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/java/MMtest/testStageDevice.java" />
         <option value="$PROJECT_DIR$/src/main/java/MMDevices/LoadedDevices.java" />
         <option value="$PROJECT_DIR$/src/main/java/MMDevices/DeviceLabelsAssigned.java" />
         <option value="$PROJECT_DIR$/src/main/java/MMDevices/DeviceNameMap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MMCore/DeviceNameMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/MMExceptions/DeviceNotDetectedException.java" />
         <option value="$PROJECT_DIR$/src/main/java/MMCore/MMCore.java" />
         <option value="$PROJECT_DIR$/src/main/java/MMInterfaces/MMLoadUnloadDeviceInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/MMExceptions/AutomatedDetectionException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MMInterfaces/MMInitializeDevice.java" />
         <option value="$PROJECT_DIR$/src/main/java/MMExceptions/DeviceNotInitializedException.java" />
         <option value="$PROJECT_DIR$/src/main/java/MMExceptions/DeviceNotSetException.java" />
-        <option value="$PROJECT_DIR$/src/test/java/MMtest/testXYStageDevice.java" />
         <option value="$PROJECT_DIR$/src/main/java/MMDevices/MMXYStageDevice.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/MMInterfaces/MMInitializeDevice.java" />
         <option value="$PROJECT_DIR$/src/main/java/MMInterfaces/MMXYStageBase.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MMtest/testXYStageDevice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FocusDirectionException/FocusDirectionException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MMCore/DeviceNameMap.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MMCore/DeviceLabelsAssigned.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MMDevices/MMLinearStageDevice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MMDevices/MMLaserDevice.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MMtest/testLaserDevice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MMInterfaces/MMLinearStageBase.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MMtest/testLinearStageDevice.java" />
       </list>
     </option>
   </component>
@@ -482,6 +541,7 @@
     <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -537,14 +597,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="MMExceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MicromanagerDevice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MicromanagerDevice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="MMInterfaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -572,6 +624,11 @@
               <item name="MicromanagerDevice" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
+            <path>
+              <item name="MicromanagerDevice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="MMCoreJ" type="70bed36:NamedLibraryElementNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -596,6 +653,7 @@
       <recent name="MMInterfaces" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="FocusDirectionException" />
       <recent name="MMExceptions" />
     </key>
   </component>
@@ -611,7 +669,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.testXYStageDevice">
+  <component name="RunManager" selected="JUnit.testLinearStageDevice">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -622,6 +680,52 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="testLinearStageDevice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MicromanagerDevice_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MMtest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="MMtest" />
+      <option name="MAIN_CLASS_NAME" value="MMtest.testLinearStageDevice" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="testLinearStageDevice.test_multiple_different_device_creation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MicromanagerDevice_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MMtest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="MMtest" />
+      <option name="MAIN_CLASS_NAME" value="MMtest.testLinearStageDevice" />
+      <option name="METHOD_NAME" value="test_multiple_different_device_creation" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -654,7 +758,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="testXYStageDevice.test_device_detection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testXYStageDevice.test_multiple_different_device_creation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MicromanagerDevice_test" />
       <extension name="coverage">
         <pattern>
@@ -666,7 +770,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="MMtest" />
       <option name="MAIN_CLASS_NAME" value="MMtest.testXYStageDevice" />
-      <option name="METHOD_NAME" value="test_device_detection" />
+      <option name="METHOD_NAME" value="test_multiple_different_device_creation" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -677,7 +781,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="testXYStageDevice.test_device_operation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testXYStageDevice.test_multiple_similar_device_creation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MicromanagerDevice_test" />
       <extension name="coverage">
         <pattern>
@@ -689,53 +793,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="MMtest" />
       <option name="MAIN_CLASS_NAME" value="MMtest.testXYStageDevice" />
-      <option name="METHOD_NAME" value="test_device_operation" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="testXYStageDevice.test_duplicate_device_labels" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MicromanagerDevice_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MMtest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="MMtest" />
-      <option name="MAIN_CLASS_NAME" value="MMtest.testXYStageDevice" />
-      <option name="METHOD_NAME" value="test_duplicate_device_labels" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="testXYStageDevice.test_invalid_device_loading" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MicromanagerDevice_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MMtest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="MMtest" />
-      <option name="MAIN_CLASS_NAME" value="MMtest.testXYStageDevice" />
-      <option name="METHOD_NAME" value="test_invalid_device_loading" />
+      <option name="METHOD_NAME" value="test_multiple_similar_device_creation" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -770,18 +828,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.testXYStageDevice" />
-      <item itemvalue="JUnit.testXYStageDevice.test_invalid_device_loading" />
-      <item itemvalue="JUnit.testXYStageDevice.test_duplicate_device_labels" />
-      <item itemvalue="JUnit.testXYStageDevice.test_device_detection" />
-      <item itemvalue="JUnit.testXYStageDevice.test_device_operation" />
+      <item itemvalue="JUnit.testXYStageDevice.test_multiple_similar_device_creation" />
+      <item itemvalue="JUnit.testXYStageDevice.test_multiple_different_device_creation" />
+      <item itemvalue="JUnit.testLinearStageDevice" />
+      <item itemvalue="JUnit.testLinearStageDevice.test_multiple_different_device_creation" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.testLinearStageDevice" />
+        <item itemvalue="JUnit.testLinearStageDevice.test_multiple_different_device_creation" />
+        <item itemvalue="JUnit.testXYStageDevice.test_multiple_different_device_creation" />
         <item itemvalue="JUnit.testXYStageDevice" />
-        <item itemvalue="JUnit.testXYStageDevice.test_device_operation" />
-        <item itemvalue="JUnit.testXYStageDevice.test_duplicate_device_labels" />
-        <item itemvalue="JUnit.testXYStageDevice.test_device_detection" />
-        <item itemvalue="JUnit.testXYStageDevice.test_invalid_device_loading" />
+        <item itemvalue="JUnit.testXYStageDevice.test_multiple_similar_device_creation" />
       </list>
     </recent_temporary>
   </component>
@@ -799,35 +857,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="testXYStageDevice_test_device_operation - 2018.10.19 at 16h 43m 52s.xml">
-      <configuration name="testXYStageDevice.test_device_operation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testXYStageDevice_test_device_operation - 2018.10.19 at 16h 44m 16s.xml">
-      <configuration name="testXYStageDevice.test_device_operation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testXYStageDevice_test_device_operation - 2018.10.19 at 16h 44m 34s.xml">
-      <configuration name="testXYStageDevice.test_device_operation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testXYStageDevice_test_device_operation - 2018.10.19 at 16h 45m 32s.xml">
-      <configuration name="testXYStageDevice.test_device_operation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testXYStageDevice_test_device_operation - 2018.10.19 at 16h 46m 06s.xml">
-      <configuration name="testXYStageDevice.test_device_operation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testXYStageDevice_test_device_operation - 2018.10.19 at 16h 46m 46s.xml">
-      <configuration name="testXYStageDevice.test_device_operation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testXYStageDevice_test_device_operation - 2018.10.19 at 16h 47m 32s.xml">
-      <configuration name="testXYStageDevice.test_device_operation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testXYStageDevice_test_device_operation - 2018.10.19 at 16h 47m 57s.xml">
-      <configuration name="testXYStageDevice.test_device_operation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testXYStageDevice_test_device_operation - 2018.10.19 at 16h 50m 51s.xml">
-      <configuration name="testXYStageDevice.test_device_operation" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="testXYStageDevice - 2018.10.19 at 16h 51m 14s.xml">
       <configuration name="testXYStageDevice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testXYStageDevice - 2018.10.22 at 11h 35m 49s.xml">
+      <configuration name="testXYStageDevice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testXYStageDevice_test_multiple_similar_device_creation - 2018.10.22 at 13h 47m 41s.xml">
+      <configuration name="testXYStageDevice.test_multiple_similar_device_creation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testXYStageDevice_test_device_operation - 2018.10.22 at 13h 50m 56s.xml">
+      <configuration name="testXYStageDevice.test_device_operation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testXYStageDevice_test_multiple_similar_device_creation - 2018.10.22 at 13h 51m 00s.xml">
+      <configuration name="testXYStageDevice.test_multiple_similar_device_creation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testXYStageDevice_test_multiple_similar_device_creation - 2018.10.22 at 13h 51m 54s.xml">
+      <configuration name="testXYStageDevice.test_multiple_similar_device_creation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testXYStageDevice_test_multiple_similar_device_creation - 2018.10.22 at 13h 55m 15s.xml">
+      <configuration name="testXYStageDevice.test_multiple_similar_device_creation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testXYStageDevice - 2018.10.22 at 14h 02m 25s.xml">
+      <configuration name="testXYStageDevice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testXYStageDevice_test_multiple_different_device_creation - 2018.10.22 at 14h 06m 52s.xml">
+      <configuration name="testXYStageDevice.test_multiple_different_device_creation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testLinearStageDevice - 2018.10.22 at 17h 19m 42s.xml">
+      <configuration name="testLinearStageDevice" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -850,8 +908,8 @@
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5346113" visible="true" weight="0.3167006" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5346113" visible="true" weight="0.32586557" />
+      <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" weight="0.3299389" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" />
@@ -905,17 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MMExceptions/CMMException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding>
-            <element signature="e#113#114#0" expanded="true" />
-            <element signature="e#143#144#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MMLaserDeviceConstructor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -926,27 +973,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Applications/Micro-Manager-2.0.0-beta3-20181001/plugins/Micro-Manager/MMCoreJ.jar!/mmcorej/MMCoreJ.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MMExceptions/LoadStageDeviceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -961,43 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="8" column="102" selection-start-line="8" selection-start-column="89" selection-end-line="8" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MMInterfaces/MMXYStageInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MMCore/DeviceNameMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MMCore/DeviceLabelsAssigned.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MMCore/MMCore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1022,34 +1015,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MMExceptions/LoadLaserDeviceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" lean-forward="true" selection-start-line="2" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MMExceptions/DeviceNotInitializedException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MMInterfaces/MMInitializeDevice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="72" lean-forward="true" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MMExceptions/DeviceNotSetException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -1060,25 +1029,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MMInterfaces/MMXYStageBase.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMInterfaces/MMInitializeDevice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="210">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MMDevices/MMXYStageDevice.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="61" column="16" lean-forward="true" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMInterfaces/MMXYStageInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMExceptions/LoadLaserDeviceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMExceptions/LoadStageDeviceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMExceptions/CMMException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding>
+            <element signature="e#113#114#0" expanded="true" />
+            <element signature="e#143#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FocusDirectionException/FocusDirectionException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMExceptions/DeviceNotSetException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" lean-forward="true" selection-start-line="2" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMCore/DeviceNameMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="84" lean-forward="true" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMCore/DeviceLabelsAssigned.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMCore/MMCore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MMtest/testShutterDevice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MMtest/testLaserDevice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMInterfaces/MMXYStageBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="170" column="32" lean-forward="true" selection-start-line="170" selection-start-column="32" selection-end-line="170" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMDevices/MMShutterDevice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMDevices/MMLaserDevice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMDevices/MMXYStageDevice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#550#551#0" expanded="true" />
             <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
             <element signature="e#650#651#0" expanded="true" />
             <element signature="e#687#688#0" expanded="true" />
             <element signature="e#721#722#0" expanded="true" />
@@ -1086,10 +1178,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMDevices/MMLinearStageDevice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#694#695#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MMtest/testXYStageDevice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="76" column="13" lean-forward="true" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+        <state relative-caret-position="172">
+          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MMInterfaces/MMLinearStageBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MMtest/testLinearStageDevice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="222" column="45" lean-forward="true" selection-start-line="222" selection-start-column="45" selection-end-line="222" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

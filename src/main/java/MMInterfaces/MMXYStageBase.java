@@ -10,14 +10,14 @@ import MMCore.MMCore;
 /**
  * contains all methods for adjusting and retrieving device properties
  */
-public abstract class MMXYStageBase implements MMLoadUnloadDeviceInterface, MMInitializeDevice {
+public class MMXYStageBase implements MMLoadUnloadDeviceInterface, MMInitializeDevice {
 
     private final CMMCore lcmm;
     private final String device_label;
     private final String device_module;
     private final String device_name;
 
-    public MMXYStageBase(String pdevice_label, String pdevice_module, String pdevice_name) {
+    protected MMXYStageBase(String pdevice_label, String pdevice_module, String pdevice_name) {
         lcmm = MMCore.getCore();
         device_label = pdevice_label;
         device_module = pdevice_module;
