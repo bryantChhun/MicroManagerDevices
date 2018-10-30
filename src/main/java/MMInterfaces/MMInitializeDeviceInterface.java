@@ -8,10 +8,12 @@ import mmcorej.DeviceDetectionStatus;
 /**
  * all device base abstract classes will implement this interface
  */
-public interface MMInitializeDevice {
+public interface MMInitializeDeviceInterface {
 
     public DeviceDetectionStatus detectDevice() throws DeviceNotDetectedException, AutomatedDetectionException;
 
     public void initializeDevice() throws DeviceNotInitializedException;
+
+    //TODO: do we need to set device parameters before initialization?  Serial ports? etc...
 
 }

@@ -5,9 +5,8 @@ import mmcorej.CMMCore;
 /**
  * Singleton that returns CMMCore object from the MM-Java Wrapper
  * constructor is package private
- */
-
-/**
+ *
+ *
  * MicroManager supports two types of device calls:
  * 1) Direct, device-specific calls to the C++ library via CMMCore
  *      Ex: cmm.set"property"("label", value);
@@ -27,6 +26,8 @@ import mmcorej.CMMCore;
  *   Only caveat here is that ALL devices must have unique names (even across types)
  *
  * This class is for initialization and interfacing.
+ *
+ * @author bryant.chhun
  */
 public class MMCore {
 

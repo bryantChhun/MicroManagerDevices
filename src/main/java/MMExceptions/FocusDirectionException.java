@@ -1,4 +1,4 @@
-package FocusDirectionException;
+package MMExceptions;
 
 public class FocusDirectionException extends Exception{
 

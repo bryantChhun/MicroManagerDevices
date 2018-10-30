@@ -1,28 +1,37 @@
 package MMDevices;
 
 import MMExceptions.LoadStageDeviceException;
-import MMInterfaces.MMLinearStageBase;
+import MMInterfaces.MMGenericDeviceByPropertyBase;
 
 /**
- * Controls any MicroManager XYStage device.  Does not access the Core
+ * Controls any Micromanager device using manufacturer-defined properties  Does not access the Core
+ *   See Manufacturer's documentation for specific properties.
+ *  Example: Coherent cubes can be controlled ONLY with properties (not device specific calls in the Core)
+ *          https://github.com/micro-manager/micro-manager/blob/master/DeviceAdapters/CoherentCube/CoherentCube.cpp
+ *          Searching for "Property" shows the following defined:
+ *
+ *          g_ControllerName = "CoherentCube";
+ *          g_Keyword_PowerSetpoint = "PowerSetpoint";
+ *          g_Keyword_PowerReadback = "PowerReadback";
+ *
  *
  * @author bryant.chhun
  */
-public class MMLinearStageDevice extends MMLinearStageBase {
+public class MMGenericDeviceByProperty extends MMGenericDeviceByPropertyBase {
 
     private final String llabel;
     private final String lmoduleName;
     private final String ldeviceName;
 
     /**
-     * For an incomplete list of available devices, see here: https://micro-manager.org/wiki/Device_Support
      *
      * @param plabel Unique identifier for this device.  Core throws exception if already exists
      * @param pmoduleName Device "Vendor" name.
      * @param pdeviceName Specific device included under "Vendor" module.
-     * @throws LoadStageDeviceException: exception plus message
+     * @throws LoadStageDeviceException : exception plus message
      */
-    public MMLinearStageDevice(String plabel, String pmoduleName, String pdeviceName) throws LoadStageDeviceException {
+
+    public MMGenericDeviceByProperty(String plabel, String pmoduleName, String pdeviceName) throws LoadStageDeviceException {
         super(plabel, pmoduleName, pdeviceName);
 
         llabel = plabel;
@@ -47,5 +56,4 @@ public class MMLinearStageDevice extends MMLinearStageBase {
     public String getDeviceName() {
         return ldeviceName;
     }
-
 }

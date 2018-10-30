@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import MMCore.MMCore;
+import MMDevices.MMLinearStageDevice;
 import MMDevices.MMXYStageDevice;
 import MMExceptions.*;
 import mmcorej.CMMCore;
@@ -19,6 +20,7 @@ public class testXYStageDevice {
 
     private MMXYStageDevice xyStage;
     private MMXYStageDevice xyStage2;
+    private MMLinearStageDevice linStage;
     private CMMCore lcmm;
 
     // ==========  Basic device loading tests =================== //
@@ -37,7 +39,10 @@ public class testXYStageDevice {
         lcmm = MMCore.getCore();
         try {
             lcmm.unloadAllDevices();
-        } catch (Exception ex) {System.out.println("Devices not UNloaded");}
+        } catch (Exception ex) {
+            System.out.println("Devices not UNloaded");
+            fail(ex);
+        }
     }
 
     @Test
@@ -56,7 +61,10 @@ public class testXYStageDevice {
         lcmm = MMCore.getCore();
         try {
             lcmm.unloadAllDevices();
-        } catch (Exception ex) {System.out.println("Devices not UNloaded");}
+        } catch (Exception ex) {
+            System.out.println("Devices not UNloaded");
+            fail(ex);
+        }
     }
 
     @Test
@@ -76,7 +84,10 @@ public class testXYStageDevice {
         lcmm = MMCore.getCore();
         try {
             lcmm.unloadAllDevices();
-        } catch (Exception ex) {System.out.println("Devices not UNloaded");}
+        } catch (Exception ex) {
+            System.out.println("Devices not UNloaded");
+            fail(ex);
+        }
     }
 
     @Test
@@ -102,7 +113,10 @@ public class testXYStageDevice {
         lcmm = MMCore.getCore();
         try {
             lcmm.unloadAllDevices();
-        } catch (Exception ex) {System.out.println("Devices not UNloaded");}
+        } catch (Exception ex) {
+            System.out.println("Devices not UNloaded");
+            fail(ex);
+        }
 
     }
 
@@ -119,6 +133,7 @@ public class testXYStageDevice {
         try {
             xyStage.initializeDevice();
         } catch (DeviceNotInitializedException dex) {
+            fail(dex);
             throw new DeviceNotInitializedException("test fail: device could not be initialized :"+dex);
         }
 
@@ -128,13 +143,14 @@ public class testXYStageDevice {
             lcmm.unloadAllDevices();
         } catch (Exception ex) {
             System.out.println("Devices not UNloaded");
+            fail(ex);
         }
     }
 
     // ==========  XY stage device-specific tests =================== //
 
     @Test
-    void test_device_operation() {
+    void test_device_operation() throws DeviceNotSetException {
         // Setup
         lcmm = MMCore.getCore();
         try {
@@ -161,6 +177,7 @@ public class testXYStageDevice {
             lcmm.unloadAllDevices();
         } catch (Exception ex) {
             System.out.println("Devices not UNloaded");
+            fail(ex);
         }
     }
 
@@ -198,6 +215,7 @@ public class testXYStageDevice {
             lcmm.unloadAllDevices();
         } catch (Exception ex) {
             System.out.println("Devices not UNloaded");
+            fail(ex);
         }
     }
 
@@ -210,7 +228,7 @@ public class testXYStageDevice {
         lcmm = MMCore.getCore();
         try {
             xyStage = new MMXYStageDevice("stage1", "DemoCamera", "DXYStage");
-            xyStage2 = new MMXYStageDevice("stage2", "DemoCamera", "DStage");
+            linStage = new MMLinearStageDevice("stage2", "DemoCamera", "DStage");
         } catch (Exception ex) {
             fail(ex);
         }
@@ -219,12 +237,13 @@ public class testXYStageDevice {
         try {
             xyStage.setOriginXY();
             xyStage.setRelativeXYPosition(100, 100);
+            linStage.setOrigin();
+            linStage.setPosition(50);
             int x = (int) Math.round(lcmm.getXPosition(xyStage.getLabel()));
             int y = (int) Math.round(lcmm.getYPosition(xyStage.getLabel()));
-            int x2 = (int) Math.round(lcmm.getXPosition(xyStage2.getLabel()));
-            int y2 = (int) Math.round(lcmm.getXPosition(xyStage2.getLabel()));
-            System.out.println(" "+x+" "+y+" "+x2+" "+y2);
-            if(x!=100 || y!= 100 || x2!=50 || y2!=50) {
+            int x2 = (int) Math.round(lcmm.getPosition(linStage.getLabel()));
+            System.out.println(" "+x+" "+y+" "+x2);
+            if(x!=100 || y!= 100 || x2!=50) {
                 throw new DeviceNotSetException("unable to set device values on two similar devices");
             }
         } catch (Exception ex) {
@@ -236,6 +255,7 @@ public class testXYStageDevice {
             lcmm.unloadAllDevices();
         } catch (Exception ex) {
             System.out.println("Devices not UNloaded");
+            fail(ex);
         }
     }
 

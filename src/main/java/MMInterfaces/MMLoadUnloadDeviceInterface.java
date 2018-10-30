@@ -13,5 +13,7 @@ public interface MMLoadUnloadDeviceInterface {
 
     public void unloadLibrary() throws LoadStageDeviceException;
 
+    public void unloadAllDevices() throws LoadStageDeviceException;
+
 
 }

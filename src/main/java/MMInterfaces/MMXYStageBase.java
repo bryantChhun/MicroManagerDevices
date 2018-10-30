@@ -8,9 +8,11 @@ import mmcorej.DoubleVector;
 import MMCore.MMCore;
 
 /**
- * contains all methods for adjusting and retrieving device properties
+ * Uses the CMMCore java wrapper to adjust and retrieve XY STAGE device properties
+ *
+ * @author bryant.chhun
  */
-public class MMXYStageBase implements MMLoadUnloadDeviceInterface, MMInitializeDevice {
+public class MMXYStageBase implements MMLoadUnloadDeviceInterface, MMInitializeDeviceInterface {
 
     private final CMMCore lcmm;
     private final String device_label;
@@ -188,6 +190,15 @@ public class MMXYStageBase implements MMLoadUnloadDeviceInterface, MMInitializeD
             lcmm.unloadLibrary(device_module);
         } catch (Exception ex) {
             throw new LoadStageDeviceException("could not UNLOAD library for micromanager stage device: " + ex.getMessage());
+        }
+    }
+
+    @Override
+    public void unloadAllDevices() throws LoadStageDeviceException {
+        try {
+            lcmm.unloadAllDevices();
+        } catch (Exception ex) {
+            throw new LoadStageDeviceException("Could not UNLOAD ALL micromanager devices: " + ex.getMessage());
         }
     }
 

@@ -6,13 +6,12 @@ import MMExceptions.*;
 import mmcorej.CMMCore;
 import mmcorej.DeviceDetectionStatus;
 
-
 /**
- * Uses the CMMCore java wrapper to adjust and retrieve LINEAR STAGE device properties
+ * Uses MMCore Java wrapper to control devices using string properties.
+ *   See exact documentation for your device for available strings.
  *
- * @author bryant.chhun
  */
-public class MMLinearStageBase implements MMLoadUnloadDeviceInterface, MMInitializeDeviceInterface {
+public class MMGenericDeviceByPropertyBase implements MMLoadUnloadDeviceInterface, MMInitializeDeviceInterface {
 
     private final CMMCore lcmm;
     private final String device_label;
@@ -20,7 +19,7 @@ public class MMLinearStageBase implements MMLoadUnloadDeviceInterface, MMInitial
     private final String device_name;
 
 
-    protected MMLinearStageBase(String pdevice_label, String pdevice_module, String pdevice_name) {
+    protected MMGenericDeviceByPropertyBase(String pdevice_label, String pdevice_module, String pdevice_name) {
         lcmm = MMCore.getCore();
         device_label = pdevice_label;
         device_module = pdevice_module;
@@ -29,63 +28,44 @@ public class MMLinearStageBase implements MMLoadUnloadDeviceInterface, MMInitial
 
     // =============  Stage Base methods  ==================== //
 
-    public void setOrigin() throws CMMException {
-        try {
-            lcmm.setOrigin(device_label);
+    //TODO: use generics here to simplify?
+    protected void setProperty(String property, float value) throws DeviceByPropertyException {
+        try{
+            lcmm.setProperty(device_label, property, value);
         } catch (Exception ex) {
-            throw new CMMException("Error setting XY Origin for device: " + device_label + "\t" + ex.getMessage());
+            throw new DeviceByPropertyException(String.format("Exception setting property: %s to value: %f  : " +ex.getMessage(), property, value));
         }
     }
 
-    public void setPosition(double z) throws CMMException {
-        try {
-            lcmm.setPosition(device_label, z);
+    protected void setProperty(String property, int value) throws DeviceByPropertyException {
+        try{
+            lcmm.setProperty(device_label, property, value);
         } catch (Exception ex) {
-            throw new CMMException("Error setting XY position for device: " + device_label + "\t" + ex.getMessage());
+            throw new DeviceByPropertyException(String.format("Exception setting property: %s to value: %i  : " +ex.getMessage(), property, value));
         }
     }
 
-    public void setRelativePosition(double dz) throws CMMException {
-        try {
-            lcmm.setRelativePosition(device_label, dz);
+    protected void setProperty(String property, double value) throws DeviceByPropertyException {
+        try{
+            lcmm.setProperty(device_label, property, value);
         } catch (Exception ex) {
-            throw new CMMException("Error setting relative XY position for device: " + device_label + "\t" + ex.getMessage());
+            throw new DeviceByPropertyException(String.format("Exception setting property: %s to value: %d  : " +ex.getMessage(), property, value));
         }
     }
 
-    public void setAdapterOrigin(double dz) throws CMMException {
-        try {
-            lcmm.setAdapterOrigin(device_label, dz);
+    protected void setProperty(String property, String value) throws DeviceByPropertyException {
+        try{
+            lcmm.setProperty(device_label, property, value);
         } catch (Exception ex) {
-            throw new CMMException("Error setting relative XY position for device: " + device_label + "\t" + ex.getMessage());
+            throw new DeviceByPropertyException(String.format("Exception setting property: %s to value: %s  : " +ex.getMessage(), property, value));
         }
     }
 
-    public void setFocusDirection(int sign) throws CMMException, FocusDirectionException {
-        if(sign!=-1 && sign!=0 && sign!= 1){
-            throw new FocusDirectionException("sign must be -1, 0, or 1");
-        }
-
-        try {
-            lcmm.setFocusDirection(device_label, sign);
+    protected void setProperty(String property, Boolean value) throws DeviceByPropertyException {
+        try{
+            lcmm.setProperty(device_label, property, value);
         } catch (Exception ex) {
-            throw new CMMException("Error setting focus direction for device: " + device_label + "\t" + ex.getMessage());
-        }
-    }
-
-    public double getPosition() throws CMMException {
-        try {
-            return lcmm.getPosition(device_label);
-        } catch (Exception ex) {
-            throw new CMMException("Error getting position for device: " + device_label + "\t" + ex.getMessage());
-        }
-    }
-
-    public int getFocusDirection() throws CMMException {
-        try {
-            return lcmm.getFocusDirection(device_label);
-        } catch (Exception ex) {
-            throw new CMMException("Error getting Focus Direction for device: " + device_label + "\t" + ex.getMessage());
+            throw new DeviceByPropertyException(String.format("Exception setting property: %s to value: %b  : " +ex.getMessage(), property, value));
         }
     }
 
@@ -152,4 +132,5 @@ public class MMLinearStageBase implements MMLoadUnloadDeviceInterface, MMInitial
             throw new DeviceNotInitializedException("could not detect device " + ex.getMessage());
         }
     }
+
 }
