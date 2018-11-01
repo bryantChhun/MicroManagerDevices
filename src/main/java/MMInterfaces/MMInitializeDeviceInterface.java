@@ -12,7 +12,7 @@ public interface MMInitializeDeviceInterface {
 
     public DeviceDetectionStatus detectDevice() throws DeviceNotDetectedException, AutomatedDetectionException;
 
-    public void initializeDevice() throws DeviceNotInitializedException;
+    public boolean initializeDevice() throws DeviceNotInitializedException;
 
     //TODO: do we need to set device parameters before initialization?  Serial ports? etc...
 

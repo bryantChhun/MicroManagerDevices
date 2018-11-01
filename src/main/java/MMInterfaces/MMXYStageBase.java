@@ -37,6 +37,26 @@ public class MMXYStageBase implements MMLoadUnloadDeviceInterface, MMInitializeD
         }
     }
 
+    public void setXPosition(double x, double epsilon) throws CMMException
+    {
+        try {
+            double currentY = this.getYPosition();
+            this.setXYPosition(x, currentY);
+        } catch (Exception ex) {
+            throw new CMMException("Error setting X position for device: " + device_label + "\t"+ex.getMessage());
+        }
+    }
+
+    public void setYPosition(double y, double epsilon) throws CMMException
+    {
+        try {
+            double currentX = this.getXPosition();
+            this.setXYPosition(currentX, y);
+        } catch (Exception ex) {
+            throw new CMMException("Error setting X position for device: " + device_label + "\t"+ex.getMessage());
+        }
+    }
+
     public void setRelativeXYPosition(double dx, double dy) throws CMMException
     {
         try {
@@ -167,36 +187,40 @@ public class MMXYStageBase implements MMLoadUnloadDeviceInterface, MMInitializeD
 
 
     @Override
-    public void loadDevice() throws LoadStageDeviceException {
+    public boolean loadDevice() throws LoadStageDeviceException {
         try {
             lcmm.loadDevice(device_label, device_module, device_name);
+            return true;
         } catch (Exception ex) {
             throw new LoadStageDeviceException("could not load micromanager stage device: " + ex.getMessage());
         }
     }
 
     @Override
-    public void unloadDevice() throws LoadStageDeviceException{
+    public boolean unloadDevice() throws LoadStageDeviceException{
         try {
             lcmm.unloadDevice(device_label);
+            return true;
         } catch (Exception ex) {
             throw new LoadStageDeviceException("could not UNload micromanager stage device: " + ex.getMessage());
         }
     }
 
     @Override
-    public void unloadLibrary() throws LoadStageDeviceException{
+    public boolean unloadLibrary() throws LoadStageDeviceException{
         try {
             lcmm.unloadLibrary(device_module);
+            return true;
         } catch (Exception ex) {
             throw new LoadStageDeviceException("could not UNLOAD library for micromanager stage device: " + ex.getMessage());
         }
     }
 
     @Override
-    public void unloadAllDevices() throws LoadStageDeviceException {
+    public boolean unloadAllDevices() throws LoadStageDeviceException {
         try {
             lcmm.unloadAllDevices();
+            return true;
         } catch (Exception ex) {
             throw new LoadStageDeviceException("Could not UNLOAD ALL micromanager devices: " + ex.getMessage());
         }
@@ -219,9 +243,10 @@ public class MMXYStageBase implements MMLoadUnloadDeviceInterface, MMInitializeD
     }
 
     @Override
-    public void initializeDevice() throws DeviceNotInitializedException {
+    public boolean initializeDevice() throws DeviceNotInitializedException {
         try {
             lcmm.initializeDevice(device_label);
+            return true;
         } catch (Exception ex) {
             throw new DeviceNotInitializedException("could not detect device " + ex.getMessage());
         }

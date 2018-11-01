@@ -7,13 +7,13 @@ import MMExceptions.LoadStageDeviceException;
  */
 public interface MMLoadUnloadDeviceInterface {
 
-    public void loadDevice() throws LoadStageDeviceException;
+    public boolean loadDevice() throws LoadStageDeviceException;
 
-    public void unloadDevice() throws LoadStageDeviceException;
+    public boolean unloadDevice() throws LoadStageDeviceException;
 
-    public void unloadLibrary() throws LoadStageDeviceException;
+    public boolean unloadLibrary() throws LoadStageDeviceException;
 
-    public void unloadAllDevices() throws LoadStageDeviceException;
+    public boolean unloadAllDevices() throws LoadStageDeviceException;
 
 
 }
