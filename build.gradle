@@ -15,6 +15,8 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 
+version = '1.0'
+
 //***********************************************************************************
 // JAVA CODE BUILDING
 
@@ -51,22 +53,35 @@ dependencies {
     compile group: 'org.junit.platform', name: 'junit-platform-commons', version: '1.2.0'
     compile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.2.0'
     compile group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.2.0'
+
+    //MMCoreJ
+    //compile files('/Applications/Micro-Manager-2.0.0-beta3-20181001/plugins/Micro-Manager/MMCoreJ.jar')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
 }
 
 
 
 // In this section you declare where to find the dependencies of your project
 repositories {
-    // Use jcenter for resolving your dependencies.
-    // You can declare any Maven/Ivy/file repository here.
     mavenLocal()
     mavenCentral()
     jcenter()
+
 }
 
 task sourcesJar(type: Jar) {
     classifier = 'sources'
     from sourceSets.main.allSource
+}
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Jar file example',
+                'Implementation-Version': version
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
 }
 
 //group   = project.ext.groupname
